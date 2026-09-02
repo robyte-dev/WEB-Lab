@@ -28,10 +28,7 @@ export default function ApiExplorerHub() {
         <div className="absolute right-0 top-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 space-y-3 max-w-3xl">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-indigo-500/20 border border-indigo-500/30 rounded-full text-indigo-300 text-xs font-semibold">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Web II REST API Exploration Suite</span>
-          </div>
+         
 
           <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
             Public REST API Showcase
