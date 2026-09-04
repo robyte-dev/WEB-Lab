@@ -1,38 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
-import Contact from './Components/Contact';
+import ContactManager from './Components/Contacts/ContactManager';
 import Login from './Components/Login';
 import ApiExplorerHub from './Components/ApiExplorer/ApiExplorerHub';
 
 export default function App() {
-  const Contacts = [
-    {
-      name: "Robel Yitbarek",
-      email: "robelhilcoe1995@gmail.com",
-      phone: "+251-911-234-567",
-      profile_picture: "https://randomuser.me/api/portraits/men/32.jpg"
-    },
-    {
-      name: "Dawit Bekele",
-      email: "dawitbekele@gmail.com",
-      phone: "+251-922-345-678",
-      profile_picture: "https://randomuser.me/api/portraits/men/45.jpg"
-    },
-    {
-      name: "Abel Belay",
-      email: "abel1234@yahoo.com",
-      phone: "+251-977-484-623",
-      profile_picture: "https://randomuser.me/api/portraits/men/67.jpg"
-    },
-    {
-      name: "Betel Befekadu",
-      email: "betel@gmail.com",
-      phone: "+251-977-484-623",
-      profile_picture: "https://randomuser.me/api/portraits/women/44.jpg"
-    },
-  ];
-
-  const [activeTab, setActiveTab] = useState('api-explorer');
+  const [activeTab, setActiveTab] = useState('contacts');
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
@@ -88,22 +61,7 @@ export default function App() {
         ) : activeTab === 'login' ? (
           <Login />
         ) : (
-          <div className="p-8 max-w-6xl mx-auto">
-            <h2 className="text-2xl font-bold text-center text-white mb-8">
-              User Information - Exercise 1
-            </h2>
-            <div className="flex flex-wrap justify-center items-center gap-6">
-              {Contacts.map((contact, index) => (
-                <Contact
-                  key={index}
-                  name={contact.name}
-                  email={contact.email}
-                  phone={contact.phone}
-                  profile_picture={contact.profile_picture}
-                />
-              ))}
-            </div>
-          </div>
+          <ContactManager />
         )}
       </main>
     </div>
